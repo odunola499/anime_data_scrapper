@@ -22,22 +22,8 @@ columns = [
     "Popularity",
     "Members"
 ]
-"""
-fields = [
-    "Type",
-    "Episodes",
-    "Aired",
-    "Premiered",
-    "Producers",
-    "Studios",
-    "Source",
-    "Genre",
-    "Demographic",
-    "Theme",
-    "Duration",
-    "Rating",
-]
-"""
+
+
 fields = columns[1:12]
 
 #creating the file
