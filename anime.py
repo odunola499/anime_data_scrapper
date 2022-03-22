@@ -119,4 +119,4 @@ def anime_scrape(row):
     file.close()
     print("Done")
 
-anime_scrape(50)
+anime_scrape(1400)
