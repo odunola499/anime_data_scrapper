@@ -27,7 +27,7 @@ columns = [
 fields = columns[1:12]
 
 #creating the file
-file = open("anime_data.csv",mode = "w")
+file = open("anime_data.csv",mode = "w",encoding = "utf-8")
 writer = csv.writer(file)
 writer.writerow(columns)
 
@@ -77,10 +77,10 @@ def get_ScoreRankingPopularity(page):
             score_to_last.append(i.text.split(":")[1].strip())
     return score_to_last
 
-def anime_scrape(row):
+def anime_scrape(num):
     count = 0
     number = 0
-    while number <=row:
+    while number <=num:
         try:
             #get each page
             browser = requests.get(r"https://myanimelist.net/topanime.php?limit={}".format(number))
@@ -100,9 +100,8 @@ def anime_scrape(row):
         except:
             print(f"error at number {count}")
             count = count + 1
-        number+=50
+        
     print("saving file...")
     file.close()
     print("Done")
-
-anime_scrape(1400)
+anime_scrape(50)
