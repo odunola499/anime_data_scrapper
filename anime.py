@@ -104,4 +104,4 @@ def anime_scrape(num):
     print("saving file...")
     file.close()
     print("Done")
-anime_scrape(50)
+anime_scrape(100)
